@@ -1,0 +1,2 @@
+# hositipal-ionic
+ionic serve
