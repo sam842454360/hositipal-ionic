@@ -1,0 +1,126 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="{{chat.name}}">
+  <ion-content class="bg-style padding">
+      <div class="detail-content">
+      <label class="item item-input">
+        <span class="input-label">姓名</span>
+        <input type="text">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">日期</span>
+        <input type="date">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">科室</span>
+        <input type="number">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">床号</span>
+        <input type="number">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">登记号</span>
+        <input type="number">
+      </label>
+      <br/>
+   <div class="toggle-div">
+    <div class="toggle-label">
+      <span class="input-label">属性</span>
+    </div>
+    <div class="toggle-button">
+      <label class="toggle">
+        <input type="checkbox">
+        <div class="track">
+          <div class="handle"></div>
+        </div>
+      </label>
+    </div>
+   </div>
+    <div class="list-label">
+      <span class="fix input-label">跌倒评分</span>
+    </div>
+    <div class="list">
+      <div class="item range range-positive">
+        <i class="ion-ios-heart-outline"></i>
+        <input type="range" name="volume" min="45" max="100" value="45">
+        <i class="ion-ios-heart"></i>
+      </div>
+    </div>
+      <div class="list">
+
+          <label class="item item-input item-select">
+              <div class="input-label">
+                  压疮评分
+              </div>
+              <select>
+                  <option>13～14</option>
+                  <option selected>10～12</option>
+                  <option>< 9</option>
+              </select>
+          </label>
+      </div>
+
+      <div class="list">
+          <label class="item item-input item-select">
+              <div class="input-label">
+                  营养风险筛查
+              </div>
+              <select>
+                  <option>3</option>
+                  <option selected>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+              </select>
+          </label>
+      </div>
+
+      <div class="list">
+          <label class="item item-input item-select">
+              <div class="input-label">
+                  DVT评分
+              </div>
+              <select>
+                  <option>2</option>
+                  <option selected>3 - 4</option>
+                  <option>≥5</option>
+              </select>
+          </label>
+      </div>
+
+      <div class="list">
+          <label class="item item-input item-select">
+              <div class="input-label">
+                  抑郁评分
+              </div>
+              <select>
+                  <option>15 - 19</option>
+                  <option selected>20 - 27</option>
+              </select>
+          </label>
+      </div>
+
+      <div class="list">
+          <label class="item item-input item-select">
+              <div class="input-label">
+                  焦虑评分
+              </div>
+              <select>
+                  <option>10 - 14</option>
+                  <option selected>≥15</option>
+              </select>
+          </label>
+      </div>
+          <div class="submit-button">
+              <button class="fix button button-positive" ng-click="showAlert()">
+                 提 交
+              </button>
+          </div>
+      </div>
+  </ion-content>
+</ion-view>

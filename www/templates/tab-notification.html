@@ -1,0 +1,32 @@
+<ion-view view-title="消息公告">
+  <ion-content class="bg-style padding">
+    <div class="list card" ng-show="ifClose_A">
+
+      <div class="close-title item item-divider">公告一</div>
+      <div class="close-notification"><i class="ion-ios-close-empty" NG-CLICK="closeBox(1)"></i></div>
+      <div class="close-title item item-body">
+        <div>
+         请于 <b>今天下午5点前</b> 领取中秋节月饼.
+        </div>
+      </div>
+    </div>
+    <div class="list card" ng-show="ifClose_B">
+      <div class="close-title item item-divider">公告二</div>
+    <div class="close-notification"><i class="ion-ios-close-empty" NG-CLICK="closeBox(2)"></i></div>
+      <div class=" close-titleitem item-body">
+        <div>
+         中秋节放假3天!
+        </div>
+      </div>
+    </div>
+    <div class="list card" ng-show="ifClose_C">
+      <div class=" close-title item item-divider">通知三</div>
+      <div class="close-notification"><i class="ion-ios-close-empty" NG-CLICK="closeBox(3)"></i></div>
+      <div class=" close-title item item-body">
+        <div>
+          你明天有 <b>29</b> 个会议要参与.
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
