@@ -44,10 +44,21 @@ angular.module('starter.controllers', [])
                 $state.go("tab.chats");
             });
         };
+        $scope.showSubDetail_1 = function(parm){
+            $state.go("tab.detail1");
+        };
+        $scope.showSubDetail_2 = function(parm){
+            $state.go("tab.detail2");
+        };
+        $scope.showSubDetail_3 = function(parm){
+            $state.go("tab.detail3");
+        };
     }])
 
     .controller('AccountCtrl', function ($scope) {
         $scope.settings = {
             enableFriends: true
         };
-    });
+    }).controller('PatientSubDetailCtrl',['$scope','$state', function ($scope,$state) {
+
+    }]);

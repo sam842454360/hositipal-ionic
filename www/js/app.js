@@ -64,7 +64,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
                 url: '/chats/:chatId',
                 views: {
                     'tab-chats': {
-                        templateUrl: 'templates/chat-detail.html',
+                        templateUrl: 'templates/patient-detail.html',
                         controller: 'ChatDetailCtrl'
                     }
                 }
@@ -76,6 +76,30 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
                     'tab-account': {
                         templateUrl: 'templates/tab-account.html',
                         controller: 'AccountCtrl'
+                    }
+                }
+            }) .state('tab.detail1', {
+                url: '/chats/detail',
+                views: {
+                    'tab-chats': {
+                        templateUrl: 'templates/sub-detail.html',
+                        controller: 'PatientSubDetailCtrl'
+                    }
+                }
+            }).state('tab.detail2', {
+                url: '/chats/detail2',
+                views: {
+                    'tab-chats': {
+                        templateUrl: 'templates/sub-detail2.html',
+                        controller: 'PatientSubDetailCtrl'
+                    }
+                }
+            }).state('tab.detail3', {
+                url: '/chats/detail3',
+                views: {
+                    'tab-chats': {
+                        templateUrl: 'templates/sub-detail3.html',
+                        controller: 'PatientSubDetailCtrl'
                     }
                 }
             });

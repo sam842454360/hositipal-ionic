@@ -6,29 +6,39 @@ angular.module('starter.services', [])
   // Some fake testing data
   var chats = [{
     id: 0,
-    name: '住院患者高风险报表',
-    lastText: 'xxxxxxxxxxxxxx',
-    face: '../img/hospital.jpg'
-  }, {
+    name: '黄晓明',
+    lastText: '科室:1  ',
+    doctor:'主诊医生:华佗',
+    bedNum:'床号:203',
+    face: '../img/patient.jpg'
+  },{
     id: 1,
-    name: '不良事件报表',
-    lastText: 'xxxxxxxxxxxxxx',
-    face: '../img/hospital_d.jpg'
-  }, {
+    name: '刘亦菲',
+    lastText: '科室:3  ',
+    doctor:'主诊医生:扁鹊',
+    bedNum:'床号:245',
+    face: '../img/patient1.jpg'
+  },{
     id: 2,
-    name: '营养风险筛查与营养护理单',
-    lastText: 'xxxxxxxxxxxxxx',
-    face: '../img/hospital_c.jpg'
-  }, {
+    name: '区冠荣',
+    lastText: '科室:4  ',
+    doctor:'主诊医生:蔡桓公',
+    bedNum:'床号:233',
+    face: '../img/patient2.jpg'
+  },{
     id: 3,
-    name: 'Braden压疮危险评估表',
-    lastText: 'xxxxxxxxxxxxxx',
-    face: '../img/hospital_b.jpg'
-  }, {
+    name: '孙俪',
+    lastText: '科室:1  ',
+    doctor:'主诊医生:李克勤',
+    bedNum:'床号:503',
+    face: '../img/patient3.jpg'
+  },{
     id: 4,
-    name: 'MORSE跌倒评估表',
-    lastText: 'xxxxxxxxxxxxxx',
-    face: '../img/hospital_e.jpg'
+    name: '男子汉',
+    lastText: '科室:6  ',
+    doctor:'主诊医生:雷哥',
+    bedNum:'床号:324',
+    face: '../img/patient4.jpg'
   }];
 
   return {
