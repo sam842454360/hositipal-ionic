@@ -32,7 +32,7 @@ angular.module('starter.controllers', [])
         };
     })
 
-    .controller('ChatDetailCtrl', ['$scope', '$stateParams', 'Chats', '$ionicPopup','$state',function ($scope, $stateParams, Chats, $ionicPopup,$state) {
+    .controller('ChatDetailCtrl', ['$scope','$http','$stateParams', 'Chats', '$ionicPopup','$state',function ($scope,$http, $stateParams, Chats, $ionicPopup,$state) {
         $scope.chat = Chats.get($stateParams.chatId);
         $scope.showAlert = function () {
             var alertPopup = $ionicPopup.alert({
@@ -53,6 +53,16 @@ angular.module('starter.controllers', [])
         $scope.showSubDetail_3 = function(parm){
             $state.go("tab.detail3");
         };
+
+console.log(1);
+    var url = "http://192.168.0.102:8080/TestServer/DataServicePort?wsdl" ;
+             $http.get(url).success( function (data) {
+                 var myjson = JSON.parse(data);
+                 //$scope.users = ;
+                 console.log(JSON.parse(myjson));
+    //$ionicPopup.alert(JSON.parse(myjson));      
+});
+
     }])
 
     .controller('AccountCtrl', function ($scope) {
