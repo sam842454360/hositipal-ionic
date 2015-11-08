@@ -23,22 +23,38 @@
             </label>
             <br/>
             <div class="row">
-                <div class="patient-detail-source col" ng-click="showSubDetail_1()">
-                    <div style="height:40px ;text-align: center">Braden压疮危险评估</div>
-                    <div style="height:40px ;text-align: center;font-size:40px ">80</div>
+                <div class="patient-detail-source col" >
+                    <div class="patient-table-row">Braden压疮危险评估</div>
+                   
+                    <div class="patient-table-col"> 
+                        <input class="patient-table-input" type="text" value = 80></div>
                 </div>
-                <div class=" patient-detail-source col" ng-click="showSubDetail_2()">
+                <div class=" patient-detail-source col" >
                     <div style="height:40px ;text-align: center">MORSE跌倒评估</div>
                     <div style="height:40px ;text-align: center;font-size:40px;color:red ">59</div>
                 </div>
-                <div class=" patient-detail-source col" ng-click="showSubDetail_3()">
+                <div class=" patient-detail-source col">
                     <div style="height:40px ;text-align: center">营养风险筛查</div>
                     <div style="height:40px ;text-align: center;font-size:40px ">77</div>
                 </div>
             </div>
+                    <div class="row">
+                <div class="patient-detail-source col">
+                    <div style="height:40px ;text-align: center">DVT评分</div>
+                    <div style="height:40px ;text-align: center;font-size:40px ">77</div>
+                </div>
+                <div class=" patient-detail-source col">
+                    <div style="height:40px ;text-align: center">抑郁评分</div>
+                    <div style="height:40px ;text-align: center;font-size:40px;color:red ">45</div>
+                </div>
+                <div class=" patient-detail-source col">
+                    <div style="height:40px ;text-align: center">焦虑评分</div>
+                    <div style="height:40px ;text-align: center;font-size:40px ">76</div>
+                </div>
+            </div>
         </div>
         <div class="submit-button">
-            <button class="fix button button-positive" ng-click="showAlert()">
+            <button class="fix button button-positive" ng-click="refresh()">
                 提 交
             </button>
         </div>

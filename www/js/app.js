@@ -5,8 +5,8 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
-
+define(['angular', 'starter.controllers', 'starter.services'], function(angular) {
+    var nurseManagement = angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     .run(function ($ionicPlatform) {
         $ionicPlatform.ready(function () {
             // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -23,7 +23,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         });
 
     })
-
     .config(function ($stateProvider, $urlRouterProvider) {
 
         // Ionic uses AngularUI Router which uses the concept of states
@@ -31,7 +30,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         // Set up the various states which the app can be in.
         // Each state's controller can be found in controllers.js
         $stateProvider
-
             // setup an abstract state for the tabs directive
             .state('tab', {
                 url: '/tab',
@@ -55,17 +53,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
                 url: '/chats',
                 views: {
                     'tab-chats': {
-                        templateUrl: 'templates/tab-form.html',
-                        controller: 'ChatsCtrl'
+                        templateUrl: 'templates/patient-list.html',
+                        controller: 'PatientListCtrl'
                     }
                 }
             })
-            .state('tab.chat-detail', {
+            .state('tab.patient-detail', {
                 url: '/chats/:chatId',
                 views: {
                     'tab-chats': {
                         templateUrl: 'templates/patient-detail.html',
-                        controller: 'ChatDetailCtrl'
+                        controller: 'PatientDetailCtrl'
                     }
                 }
             })
@@ -107,3 +105,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         // if none of the above states are matched, use this as the fallback
         $urlRouterProvider.otherwise('/tab/dash');
     });
+
+    angular.element(document).ready(function() {
+      angular.bootstrap(document, ['starter']);
+    });
+
+    return nurseManagement;
+});

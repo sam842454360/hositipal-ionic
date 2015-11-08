@@ -64,3 +64,50 @@
     border-radius: 14px ;
     background-color : #ffffff
 }
+.patient-table-row {
+    height:2em ;text-align: center;margin-top: 0.1em;margin-bottom: 0.1em;
+}
+.patient-table-col {
+    height:4em
+}
+
+.patient-table-input {
+    height: 1.3em !important;
+    width: 2em;
+    text-align: center;
+    font-size: 3em  !important;
+    margin-left: 2em;
+}
+
+.patient-list-source {
+width: 3em;
+height: 2em !important;
+text-align: center;
+background-color: #E0FFFF;
+border:1px solid;
+border-color: #E0FFFF;
+border-radius: 14px ;
+float: right;
+margin-top: -1.5em;
+}
+.patient-list-title {
+width: 3em;
+height: 2em !important;
+text-align: center;
+float: right;
+margin-right: 0.5em;
+}
+
+.dangerous {
+    border-color: lightcoral;
+    background-color: lightcoral;
+}
+
+.attention {
+    border-color: #F0FFF0;
+    background-color: #F0FFF0;
+}
+.save-button {
+    background-color: lightblue !important;
+}
+

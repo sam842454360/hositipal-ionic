@@ -1,3 +1,4 @@
+define(['angular'], function(angular) {
 angular.module('starter.services', [])
 
 .factory('Chats', function() {
@@ -57,4 +58,5 @@ angular.module('starter.services', [])
       return null;
     }
   };
+});
 });
