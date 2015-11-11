@@ -10,8 +10,10 @@ define(function(require){
 
 
     return function ($scope, $http,PatientsService,$ionicListDelegate,$ionicPopup,$ionicLoading) {
+          var userID = '3';
           var getPatientsSuccess = function(patients){
                                        $scope.patients = patients;
+                                      // $scope.isLoading = false;
                                        $ionicLoading.hide();
                                     };
           var getPatientsError = function(error){
@@ -27,9 +29,7 @@ define(function(require){
                 maxWidth: 200,
                 showDelay: 0
               });
-          setTimeout(function(){
-              PatientsService.getPatients('1234',getPatientsSuccess,getPatientsError);
-          },2000);
+              PatientsService.getPatients(userID,getPatientsSuccess,getPatientsError);      
              $scope.toggleLeft = function() {
                 $ionicSideMenuDelegate.toggleLeft();
               };
@@ -39,10 +39,6 @@ define(function(require){
                 patient.saveSuccess = true;
             $ionicListDelegate.closeOptionButtons();
             $scope.$digest();
-            setTimeout(function(){
-                patient.saveSuccess = false;
-                 $scope.$digest();
-            },2000);
             },500);
             console.log(patient);
            } 
@@ -67,26 +63,15 @@ define(function(require){
            $scope.doRefresh = function(){
             if(!$scope.isLoading){
             $scope.isLoading = true;
-              setTimeout(function(){
-                   $scope.patients.push({
-                            id: 0,
-                            name: '大波妹',
-                            lastText: '科室:脑神经科',
-                            doctor:'登记号:332',
-                            bedNum:'床号:204',
-                            face: '../img/patient.jpg',
-                            saveSuccess:false
-                          });
-                   $scope.$broadcast('scroll.refreshComplete');  
+            PatientsService.getPatients(userID,function(patients){
+                                       $scope.patients = patients;
+                                       $scope.isLoading = false;
+                                       $scope.$broadcast('scroll.refreshComplete');  
                       var alertPopup = $ionicPopup.alert({
                                    title: '',
                                    template: loadingSuccessPopup
-                                 });
-                               /*  alertPopup.then(function(res) {
-                                   console.log('Thank you for not eating my delicious ice cream cone');
-                                 });*/
-                    $scope.isLoading = false;             
-                },3000);  
+                                 }); 
+                                    },getPatientsError);       
             } 
            }
 

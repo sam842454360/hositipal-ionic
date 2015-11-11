@@ -1,6 +1,6 @@
  <ion-view view-title="病人列表" >
 <div class="bar bar-subheader">
-  <div style = "float:left">{{currentDate}}</div>
+  <div style = "float:left;margin-left:1.5em">{{currentDate}}</div>
     <div style = "margin-right: 3em;">
     <div class="patient-list-title col" >压仓</div>
     <div class="patient-list-title col" >跌倒</div>
@@ -26,12 +26,12 @@
         </ion-refresher>
    <div style ="margin-bottom: 1em;">&nbsp;</div>
     <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="patient in patients" type="item-text-wrap">
+      <ion-item class="item-remove-animate item-avatar item-icon-right ion-context-fix" ng-repeat="patient in patients" type="item-text-wrap">
        <ion-delete-button class="ion-minus-circled" 
                              ng-click="onItemDelete(item)">
         </ion-delete-button>
-        <img ng-src="{{patient.face}}">
-        <div class="ion-checkmark-circled" style="float:right" ng-show="patient.saveSuccess"></div>
+      
+        <div class="ion-checkmark-circled" style="float:right;margin-right: -1em;" ng-show="patient.saveSuccess"></div>
         <h2>{{patient.patientName}}</h2>
         <p>科室:{{patient.department}} &nbsp;&nbsp;&nbsp;</p>
         <p style = "float: left;">床号:{{patient.patientBedNum}} 

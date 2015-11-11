@@ -1,8 +1,23 @@
 define(function(require){
+	var serverUrl = 'http://localhost:1337/192.168.0.103:8080/SHModel/action/';
 	return function($http){
 		return {
-			savePatient : function(patient){			            
+			savePatient : function(patient,successCallback,errorCallback){			            
 			            console.log('Save success:',patient);
+			         $http({
+			        method:'GET',
+			        url:serverUrl+'saveReport',
+			        params:{
+			        	vr:patient
+			        }
+					    }).success(function(data, status, headers, config) {            
+					        console.log('success data',data);
+					        //console.log(data);  
+					        })
+					        .error(function(data, status, headers, config) {
+					        console.log("error ",data);
+					        //console.log(data);
+					        });
 			        },
 			getPatients :function(userID,successCallback,errorCallback){
 					/*successCallback([
@@ -13,9 +28,9 @@ define(function(require){
 			//var url = 'http://localhost:1337/192.168.0.100:8080/SHModel/action/save';
 			  $http({
 			        method:'GET',
-			        url:'http://localhost:1337/localhost:8080/SHModel/action/getAllPatient',
+			        url:serverUrl+'getTodayList',
 			        params:{
-			            userId :userID
+			            Userid :userID
 			            }
 					    }).success(function(data, status, headers, config) {            
 					        console.log('success data',data);
@@ -25,7 +40,7 @@ define(function(require){
 					        console.log("error ",data);
 					        errorCallback(data);
 					        });
-						}      					           
+			}      					           
 		}
 	}
 });

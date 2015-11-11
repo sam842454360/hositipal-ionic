@@ -42,8 +42,8 @@ define(['angular', 'starter.controllers', 'starter.services'], function(angular)
                 url: '/dash',
                 views: {
                     'tab-dash': {
-                        templateUrl: 'templates/tab-notification.html',
-                        controller: 'DashCtrl'
+                        templateUrl: 'templates/patient-unhealthy-list.html',
+                        controller: 'PatientUnHealthyListController'
                     }
                 }
             })
