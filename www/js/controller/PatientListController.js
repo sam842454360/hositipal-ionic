@@ -5,7 +5,7 @@ define(function(require){
     var loadingSuccessPopup = "<h4 style='text-align: center;'>刷新成功</h4>"; 
     var getDate = function(){
       var date = new Date();
-     return date.getFullYear() +'年' +date.getMonth() +'月' +date.getDate()+'日';
+     return date.getFullYear() +'年' +(date.getMonth()+1) +'月' +date.getDate()+'日';
     }
 
 
