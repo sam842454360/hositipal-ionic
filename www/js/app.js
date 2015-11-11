@@ -35,8 +35,7 @@ define(['angular', 'starter.controllers', 'starter.services'], function(angular)
                 url: '/tab',
                 abstract: true,
                 templateUrl: 'templates/tabs.html'
-            })
-
+            })  
             // Each tab has its own nav history stack:
 
             .state('tab.dash', {
@@ -49,15 +48,16 @@ define(['angular', 'starter.controllers', 'starter.services'], function(angular)
                 }
             })
 
-            .state('tab.chats', {
-                url: '/chats',
+            .state('tab.patients', {
+                url: '/patients',
                 views: {
-                    'tab-chats': {
+                    'patient-list': {
                         templateUrl: 'templates/patient-list.html',
                         controller: 'PatientListCtrl'
                     }
                 }
             })
+
             .state('tab.patient-detail', {
                 url: '/chats/:chatId',
                 views: {
@@ -74,30 +74,6 @@ define(['angular', 'starter.controllers', 'starter.services'], function(angular)
                     'tab-account': {
                         templateUrl: 'templates/tab-account.html',
                         controller: 'AccountCtrl'
-                    }
-                }
-            }) .state('tab.detail1', {
-                url: '/chats/detail',
-                views: {
-                    'tab-chats': {
-                        templateUrl: 'templates/sub-detail.html',
-                        controller: 'PatientSubDetailCtrl'
-                    }
-                }
-            }).state('tab.detail2', {
-                url: '/chats/detail2',
-                views: {
-                    'tab-chats': {
-                        templateUrl: 'templates/sub-detail2.html',
-                        controller: 'PatientSubDetailCtrl'
-                    }
-                }
-            }).state('tab.detail3', {
-                url: '/chats/detail3',
-                views: {
-                    'tab-chats': {
-                        templateUrl: 'templates/sub-detail3.html',
-                        controller: 'PatientSubDetailCtrl'
                     }
                 }
             });

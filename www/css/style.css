@@ -89,18 +89,14 @@ border-color: #E0FFFF;
 border-radius: 14px ;
 float: right;
 margin-top: -1.5em;
+margin-left: 0.6em;
 }
 .patient-list-title {
 width: 3em;
 height: 2em !important;
 text-align: center;
 float: right;
-margin-right: 0.5em;
-}
-
-.dangerous {
-    border-color: lightcoral;
-    background-color: lightcoral;
+margin-right: 0.6em;
 }
 
 .attention {
@@ -109,5 +105,8 @@ margin-right: 0.5em;
 }
 .save-button {
     background-color: lightblue !important;
+}
+.delete-button {
+    background-color: red !important;
 }
 

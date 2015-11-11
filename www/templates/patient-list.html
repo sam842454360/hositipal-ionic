@@ -1,0 +1,55 @@
+ <ion-view view-title="病人列表" >
+<div class="bar bar-subheader">
+  <div style = "float:left">{{currentDate}}</div>
+    <div style = "margin-right: 3em;">
+    <div class="patient-list-title col" >压仓</div>
+    <div class="patient-list-title col" >跌倒</div>
+    <div class="patient-list-title col" >营养</div>
+    <div class="patient-list-title col" >DVT</div>
+    <div class="patient-list-title col" >抑郁</div>
+    <div class="patient-list-title col" >焦虑</div>
+  </div>
+</div>
+<!--   <ion-header-bar class="bar-positive">
+      <div class="buttons">
+        <button class="button button-icon icon ion-ios-minus-outline"></button>
+      </div>
+      <h1 class="title">Ionic Delete/Option Buttons</h1>
+      <div class="buttons">
+        <button class="button" ng-click="data.showDelete = false; data.showReorder = !data.showReorder">
+            Reorder
+        </button>
+      </div>
+    </ion-header-bar> -->
+  <ion-content class="bg-style">  
+        <ion-refresher pulling-text="下拉刷新" refreshing-text = "正在刷新...." on-refresh=" doRefresh()">
+        </ion-refresher>
+   <div style ="margin-bottom: 1em;">&nbsp;</div>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="patient in patients" type="item-text-wrap">
+       <ion-delete-button class="ion-minus-circled" 
+                             ng-click="onItemDelete(item)">
+        </ion-delete-button>
+        <img ng-src="{{patient.face}}">
+        <div class="ion-checkmark-circled" style="float:right" ng-show="patient.saveSuccess"></div>
+        <h2>{{patient.patientName}}</h2>
+        <p>科室:{{patient.department}} &nbsp;&nbsp;&nbsp;</p>
+        <p style = "float: left;">床号:{{patient.patientBedNum}} 
+          &nbsp;&nbsp; &nbsp;登记号:{{patient.patientId}}</p>
+         <input class="patient-list-source col attention" type="tel"  maxlength = "3" value = {{patient.bradenTotal}}>
+         <input class="patient-list-source col" type="tel" maxlength = "3" value = {{patient.morseTotal}}>
+         <input class="patient-list-source col attention" maxlength = "3" type="tel" value = {{patient.nrstotal}}>
+         <input class="patient-list-source col" type="tel" maxlength = "3" value = {{patient.dvttotal}}>
+         <input class="patient-list-source col attention" type="tel" maxlength  = "3"  value = {{patient.goolmyTotal}}>
+         <input class="patient-list-source col" type="tel" maxlength = "3" value = {{patient.angstTotal}}>
+
+        <ion-option-button class="button-assertive save-button"  ng-click="save(patient)">
+          保存
+        </ion-option-button>
+        <ion-option-button class="button-assertive delete-button"  ng-click="delete(patient)">
+          删除
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view> 

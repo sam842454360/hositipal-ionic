@@ -12,8 +12,8 @@ define([
         $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|itms-services):/);
     }])
     .controller('DashCtrl', DashController)
-    .controller('PatientListCtrl', ['$scope','$http','Chats','$ionicListDelegate',PatientListCtrl])
+    .controller('PatientListCtrl', ['$scope','$http','PatientsService','$ionicListDelegate','$ionicPopup','$ionicLoading',PatientListCtrl])
     .controller('PatientDetailCtrl', ['$scope','$http','$stateParams', 'Chats', '$ionicPopup','$state',PatientDetailCtrl])
-    .controller('AccountCtrl', AccountCtrl)
-    .controller('PatientSubDetailCtrl',['$scope','$state', PatientSubDetailCtrl]);
+    .controller('AccountCtrl', ['$scope','$ionicSideMenuDelegate',AccountCtrl])
+    .controller('PatientSubDetailCtrl',['$scope','$state', PatientSubDetailCtrl])
 });
