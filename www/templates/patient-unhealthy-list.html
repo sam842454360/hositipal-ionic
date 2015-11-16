@@ -12,10 +12,668 @@
                     </button>
                 </ion-nav-buttons>
             </ion-nav-bar>
+             <div class="bar bar-subheader unhealthy-detail-title">{{currentPatient.name}} {{newFormNotice}}</div>
             <ion-content class="padding">
-               <div>{{name}}</div>
+            <div style ="margin-bottom: 1em;">&nbsp;</div>
+              <div class="list">
+              
+               <!-- start -->
+               <div>
+                    <!-- 分隔栏 -->
+              <div class="item item-divider">
+                跌倒
+              </div>
+              <!-- content start-->                      
+                <ul class="list">
+                  <li class="item item-toggle">
+                    有无
+                     <label class="toggle toggle-assertive">
+                       <input type="checkbox" ng-model="unHealthyForm.hasMorse">
+                       <div class="track">
+                         <div class="handle"></div>
+                       </div>
+                     </label>
+                  </li>
+                   <div class="list">
+                    <label class="item item-input item-select">
+                      <div class="input-label">
+                        等级
+                      </div>
+                    <select style="margin-bottom: -0.1em;" ng-model="unHealthyForm.morserank" >
+                      <option value = 1>
+                       1&nbsp;级 
+                      </option>
+                      <option value = 2>
+                       2&nbsp;级 
+                      </option>
+                      <option value = 3>
+                       3&nbsp;级 
+                      </option>
+                      <option value = 4>
+                       4&nbsp;级 
+                      </option>
+                      <option value = 5>
+                       5&nbsp;级 
+                      </option>
+                     </select>
+                    </label>
+                  </div>
+                </ul>     
+                <div style ="margin-bottom: -2.5em;">&nbsp;</div>                  
+               <!-- content end-->
+             </div> 
+             <!-- end -->
+               <!-- start -->
+               <div>
+                    <!-- 分隔栏 -->
+              <div class="item item-divider">
+                压疮
+              </div>
+              <!-- content start-->                      
+                <ul class="list">
+                  <li class="item item-toggle">
+                    有无
+                     <label class="toggle toggle-assertive">
+                       <input type="checkbox" ng-model="unHealthyForm.hasBraden">
+                       <div class="track">
+                         <div class="handle"></div>
+                       </div>
+                     </label>
+                  </li>
+                   <div class="list">
+                    <label class="item item-input item-select">
+                      <div class="input-label">
+                        等级
+                      </div>
+                    <select style="margin-bottom: -0.1em;" ng-model="unHealthyForm.bradenRank" >
+                      <option value = 1>
+                       1&nbsp;级 
+                      </option>
+                      <option value = 2>
+                       2&nbsp;级 
+                      </option>
+                      <option value = 3>
+                       3&nbsp;级 
+                      </option>
+                      <option value = 4>
+                       4&nbsp;级 
+                      </option>
+                      <option value = 5>
+                       5&nbsp;级 
+                      </option>
+                     </select>
+                    </label>
+                  </div>
+                </ul>     
+                <div style ="margin-bottom: -2.5em;">&nbsp;</div>                  
+               <!-- content end-->
+             </div> 
+             <!-- end -->
+               <!-- start -->
+               <div>
+                    <!-- 分隔栏 -->
+              <div class="item item-divider">
+                防外渗药物外渗
+              </div>
+              <!-- content start-->                      
+                <ul class="list">
+                  <li class="item item-toggle">
+                    有无
+                     <label class="toggle toggle-assertive">
+                       <input type="checkbox" ng-model="unHealthyForm.hasSenyao">
+                       <div class="track">
+                         <div class="handle"></div>
+                       </div>
+                     </label>
+                  </li>
+                   <div class="list">
+                    <label class="item item-input item-select">
+                      <div class="input-label">
+                        等级
+                      </div>
+                    <select style="margin-bottom: -0.1em;" ng-model="unHealthyForm.senyaoRank" >
+                      <option value = 1>
+                       1&nbsp;级 
+                      </option>
+                      <option value = 2>
+                       2&nbsp;级 
+                      </option>
+                      <option value = 3>
+                       3&nbsp;级 
+                      </option>
+                      <option value = 4>
+                       4&nbsp;级 
+                      </option>
+                      <option value = 5>
+                       5&nbsp;级 
+                      </option>
+                     </select>
+                    </label>
+                  </div>
+                </ul>     
+                <div style ="margin-bottom: -2.5em;">&nbsp;</div>                  
+               <!-- content end-->
+             </div> 
+             <!-- end -->
+               <!-- start -->
+               <div>
+                    <!-- 分隔栏 -->
+              <div class="item item-divider">
+                给药错误
+              </div>
+              <!-- content start-->                      
+                <ul class="list">
+                  <li class="item item-toggle">
+                    有无
+                     <label class="toggle toggle-assertive">
+                       <input type="checkbox" ng-model="unHealthyForm.hasJiyaomistake">
+                       <div class="track">
+                         <div class="handle"></div>
+                       </div>
+                     </label>
+                  </li>
+                   <div class="list">
+                    <label class="item item-input item-select">
+                      <div class="input-label">
+                        等级
+                      </div>
+                    <select style="margin-bottom: -0.1em;" ng-model="unHealthyForm.jiyaomistakeRank" >
+                      <option value = 1>
+                       1&nbsp;级 
+                      </option>
+                      <option value = 2>
+                       2&nbsp;级 
+                      </option>
+                      <option value = 3>
+                       3&nbsp;级 
+                      </option>
+                      <option value = 4>
+                       4&nbsp;级 
+                      </option>
+                      <option value = 5>
+                       5&nbsp;级 
+                      </option>
+                     </select>
+                    </label>
+                  </div>
+                </ul>     
+                <div style ="margin-bottom: -2.5em;">&nbsp;</div>                  
+               <!-- content end-->
+             </div> 
+             <!-- end -->
+               <!-- start -->
+               <div>
+                    <!-- 分隔栏 -->
+              <div class="item item-divider">
+                非计划拔管
+              </div>
+              <!-- content start-->                      
+                <ul class="list">
+                  <li class="item item-toggle">
+                    有无
+                     <label class="toggle toggle-assertive">
+                       <input type="checkbox" ng-model="unHealthyForm.hasBaguan">
+                       <div class="track">
+                         <div class="handle"></div>
+                       </div>
+                     </label>
+                  </li>
+                   <div class="list">
+                    <label class="item item-input item-select">
+                      <div class="input-label">
+                        等级
+                      </div>
+                    <select style="margin-bottom: -0.1em;" ng-model="unHealthyForm.baguanRank" >
+                      <option value = 1>
+                       深静脉管 
+                      </option>
+                      <option value = 2>
+                       胃管 
+                      </option>
+                      <option value = 3>
+                       尿管
+                      </option>
+                      <option value = 4>
+                       气管插管
+                      </option>
+                     </select>
+                    </label>
+                  </div>
+                </ul>     
+                <div style ="margin-bottom: -2.5em;">&nbsp;</div>                  
+               <!-- content end-->
+             </div> 
+             <!-- end -->
+               <!-- start -->
+               <div>
+                    <!-- 分隔栏 -->
+              <div class="item item-divider">
+                自杀 
+              </div>
+              <!-- content start-->                      
+                <ul class="list">
+                  <li class="item item-toggle">
+                    有无
+                     <label class="toggle toggle-assertive">
+                       <input type="checkbox" ng-model="unHealthyForm.hasZisha">
+                       <div class="track">
+                         <div class="handle"></div>
+                       </div>
+                     </label>
+                  </li>
+                   <div class="list">
+                    <label class="item item-input item-select">
+                      <div class="input-label">
+                        等级
+                      </div>
+                    <select style="margin-bottom: -0.1em;" ng-model="unHealthyForm.zishaRank" >
+                      <option value = 1>
+                       1&nbsp;级 
+                      </option>
+                      <option value = 2>
+                       2&nbsp;级 
+                      </option>
+                      <option value = 3>
+                       3&nbsp;级 
+                      </option>
+                      <option value = 4>
+                       4&nbsp;级 
+                      </option>
+                      <option value = 5>
+                       5&nbsp;级 
+                      </option>
+                     </select>
+                    </label>
+                  </div>
+                </ul>     
+                <div style ="margin-bottom: -2.5em;">&nbsp;</div>                  
+               <!-- content end-->
+             </div> 
+             <!-- end -->
+               <!-- start -->
+               <div>
+                    <!-- 分隔栏 -->
+              <div class="item item-divider">
+                走失
+              </div>
+              <!-- content start-->                      
+                <ul class="list">
+                  <li class="item item-toggle">
+                    有无
+                     <label class="toggle toggle-assertive">
+                       <input type="checkbox" ng-model="unHealthyForm.hasZoushi">
+                       <div class="track">
+                         <div class="handle"></div>
+                       </div>
+                     </label>
+                  </li>
+                   <div class="list">
+                    <label class="item item-input item-select">
+                      <div class="input-label">
+                        等级
+                      </div>
+                    <select style="margin-bottom: -0.1em;" ng-model="unHealthyForm.zoushiRank" >
+                      <option value = 1>
+                       1&nbsp;级 
+                      </option>
+                      <option value = 2>
+                       2&nbsp;级 
+                      </option>
+                      <option value = 3>
+                       3&nbsp;级 
+                      </option>
+                      <option value = 4>
+                       4&nbsp;级 
+                      </option>
+                      <option value = 5>
+                       5&nbsp;级 
+                      </option>
+                     </select>
+                    </label>
+                  </div>
+                </ul>     
+                <div style ="margin-bottom: -2.5em;">&nbsp;</div>                  
+               <!-- content end-->
+             </div> 
+             <!-- end -->
+               <!-- start -->
+               <div>
+                    <!-- 分隔栏 -->
+              <div class="item item-divider">
+                深静脉血栓
+              </div>
+              <!-- content start-->                      
+                <ul class="list">
+                  <li class="item item-toggle">
+                    有无
+                     <label class="toggle toggle-assertive">
+                       <input type="checkbox" ng-model="unHealthyForm.hasXueshuan">
+                       <div class="track">
+                         <div class="handle"></div>
+                       </div>
+                     </label>
+                  </li>
+                   <div class="list">
+                    <label class="item item-input item-select">
+                      <div class="input-label">
+                        等级
+                      </div>
+                    <select style="margin-bottom: -0.1em;" ng-model="unHealthyForm.xueshuanRank" >
+                      <option value = 1>
+                       1&nbsp;级 
+                      </option>
+                      <option value = 2>
+                       2&nbsp;级 
+                      </option>
+                      <option value = 3>
+                       3&nbsp;级 
+                      </option>
+                      <option value = 4>
+                       4&nbsp;级 
+                      </option>
+                      <option value = 5>
+                       5&nbsp;级 
+                      </option>
+                     </select>
+                    </label>
+                  </div>
+                </ul>     
+                <div style ="margin-bottom: -2.5em;">&nbsp;</div>                  
+               <!-- content end-->
+             </div> 
+             <!-- end -->
+               <!-- start -->
+               <div>
+                    <!-- 分隔栏 -->
+              <div class="item item-divider">
+                输血反应
+              </div>
+              <!-- content start-->                      
+                <ul class="list">
+                  <li class="item item-toggle">
+                    有无
+                     <label class="toggle toggle-assertive">
+                       <input type="checkbox" ng-model="unHealthyForm.hasShuxue">
+                       <div class="track">
+                         <div class="handle"></div>
+                       </div>
+                     </label>
+                  </li>
+                   <div class="list">
+                    <label class="item item-input item-select">
+                      <div class="input-label">
+                        等级
+                      </div>
+                    <select style="margin-bottom: -0.1em;" ng-model="unHealthyForm.shuxueRank" >
+                      <option value = 1>
+                       1&nbsp;级 
+                      </option>
+                      <option value = 2>
+                       2&nbsp;级 
+                      </option>
+                      <option value = 3>
+                       3&nbsp;级 
+                      </option>
+                      <option value = 4>
+                       4&nbsp;级 
+                      </option>
+                      <option value = 5>
+                       5&nbsp;级 
+                      </option>
+                     </select>
+                    </label>
+                  </div>
+                </ul>     
+                <div style ="margin-bottom: -2.5em;">&nbsp;</div>                  
+               <!-- content end-->
+             </div> 
+             <!-- end -->
+               <!-- start -->
+               <div>
+                    <!-- 分隔栏 -->
+              <div class="item item-divider">
+                医源性皮肤损伤
+              </div>
+              <!-- content start-->                      
+                <ul class="list">
+                  <li class="item item-toggle">
+                    有无
+                     <label class="toggle toggle-assertive">
+                       <input type="checkbox" ng-model="unHealthyForm.hasSkinsunshang">
+                       <div class="track">
+                         <div class="handle"></div>
+                       </div>
+                     </label>
+                  </li>
+                   <div class="list">
+                    <label class="item item-input item-select">
+                      <div class="input-label">
+                        等级
+                      </div>
+                    <select style="margin-bottom: -0.1em;" ng-model="unHealthyForm.skinsunshangRank" >
+                      <option value = 1>
+                       1&nbsp;级 
+                      </option>
+                      <option value = 2>
+                       2&nbsp;级 
+                      </option>
+                      <option value = 3>
+                       3&nbsp;级 
+                      </option>
+                      <option value = 4>
+                       4&nbsp;级 
+                      </option>
+                      <option value = 5>
+                       5&nbsp;级 
+                      </option>
+                     </select>
+                    </label>
+                  </div>
+                </ul>     
+                <div style ="margin-bottom: -2.5em;">&nbsp;</div>                  
+               <!-- content end-->
+             </div> 
+             <!-- end -->
+               <!-- start -->
+               <div>
+                    <!-- 分隔栏 -->
+              <div class="item item-divider">
+                失禁性皮炎
+              </div>
+              <!-- content start-->                      
+                <ul class="list">
+                  <li class="item item-toggle">
+                    有无
+                     <label class="toggle toggle-assertive">
+                       <input type="checkbox" ng-model="unHealthyForm.hasPiyan">
+                       <div class="track">
+                         <div class="handle"></div>
+                       </div>
+                     </label>
+                  </li>
+                   <div class="list">
+                    <label class="item item-input item-select">
+                      <div class="input-label">
+                        等级
+                      </div>
+                    <select style="margin-bottom: -0.1em;" ng-model="unHealthyForm.piyanRank" >
+                      <option value = 1>
+                       1&nbsp;级 
+                      </option>
+                      <option value = 2>
+                       2&nbsp;级 
+                      </option>
+                      <option value = 3>
+                       3&nbsp;级 
+                      </option>
+                      <option value = 4>
+                       4&nbsp;级 
+                      </option>
+                      <option value = 5>
+                       5&nbsp;级 
+                      </option>
+                     </select>
+                    </label>
+                  </div>
+                </ul>     
+                <div style ="margin-bottom: -2.5em;">&nbsp;</div>                  
+               <!-- content end-->
+             </div> 
+             <!-- end -->
+               <!-- start -->
+               <div>
+                    <!-- 分隔栏 -->
+              <div class="item item-divider">
+                转运意外
+              </div>
+              <!-- content start-->                      
+                <ul class="list">
+                  <li class="item item-toggle">
+                    有无
+                     <label class="toggle toggle-assertive">
+                       <input type="checkbox" ng-model="unHealthyForm.hasZhuanyunywai">
+                       <div class="track">
+                         <div class="handle"></div>
+                       </div>
+                     </label>
+                  </li>
+                   <div class="list">
+                    <label class="item item-input item-select">
+                      <div class="input-label">
+                        等级
+                      </div>
+                    <select style="margin-bottom: -0.1em;" ng-model="unHealthyForm.zhuanyunywaiRank" >
+                      <option value = 1>
+                       1&nbsp;级 
+                      </option>
+                      <option value = 2>
+                       2&nbsp;级 
+                      </option>
+                      <option value = 3>
+                       3&nbsp;级 
+                      </option>
+                      <option value = 4>
+                       4&nbsp;级 
+                      </option>
+                      <option value = 5>
+                       5&nbsp;级 
+                      </option>
+                     </select>
+                    </label>
+                  </div>
+                </ul>     
+                <div style ="margin-bottom: -2.5em;">&nbsp;</div>                  
+               <!-- content end-->
+             </div> 
+             <!-- end -->
+
+              <!-- start -->
+               <div>
+                    <!-- 分隔栏 -->
+              <div class="item item-divider">
+                针刺伤
+              </div>
+              <!-- content start-->                      
+                <ul class="list">
+                  <li class="item item-toggle">
+                    有无
+                     <label class="toggle toggle-assertive">
+                       <input type="checkbox" ng-model="unHealthyForm.hasZhencishang">
+                       <div class="track">
+                         <div class="handle"></div>
+                       </div>
+                     </label>
+                  </li>
+                   <div class="list">
+                    <label class="item item-input item-select">
+                      <div class="input-label">
+                        等级
+                      </div>
+                    <select style="margin-bottom: -0.1em;" ng-model="unHealthyForm.zhencishangRank" >
+                      <option value = 1>
+                       1&nbsp;级 
+                      </option>
+                      <option value = 2>
+                       2&nbsp;级 
+                      </option>
+                      <option value = 3>
+                       3&nbsp;级 
+                      </option>
+                      <option value = 4>
+                       4&nbsp;级 
+                      </option>
+                      <option value = 5>
+                       5&nbsp;级 
+                      </option>
+                     </select>
+                    </label>
+                  </div>
+                </ul>     
+                <div style ="margin-bottom: -2.5em;">&nbsp;</div>                  
+               <!-- content end-->
+             </div> 
+             <!-- end -->
+
+              <!-- start -->
+               <div>
+                    <!-- 分隔栏 -->
+              <div class="item item-divider">
+                低血糖
+              </div>
+              <!-- content start-->                      
+                <ul class="list">
+                  <li class="item item-toggle">
+                    有无
+                     <label class="toggle toggle-assertive">
+                       <input type="checkbox" ng-model="unHealthyForm.hasXuetang">
+                       <div class="track">
+                         <div class="handle"></div>
+                       </div>
+                     </label>
+                  </li>
+                   <div class="list">
+                    <label class="item item-input item-select">
+                      <div class="input-label">
+                        等级
+                      </div>
+                    <select style="margin-bottom: -0.1em;" ng-model="unHealthyForm.xuetangRank" >
+                      <option value = 1>
+                       1&nbsp;级 
+                      </option>
+                      <option value = 2>
+                       2&nbsp;级 
+                      </option>
+                      <option value = 3>
+                       3&nbsp;级 
+                      </option>
+                      <option value = 4>
+                       4&nbsp;级 
+                      </option>
+                      <option value = 5>
+                       5&nbsp;级 
+                      </option>
+                     </select>
+                    </label>
+                  </div>
+                </ul>     
+                <div style ="margin-bottom: -2.5em;">&nbsp;</div>                  
+               <!-- content end-->
+             </div> 
+             <!-- end -->
+
+
+            </div>  
+            <button class="button button-balanced submit-button-fix" ng-click="submitUnhealthyForm(unHealthyForm)">
+              提  &nbsp; 交
+            </button>       
         </ion-content>
   </ion-side-menu-content>
+
+
+
+
+
+
 
   <!-- 左侧菜单 -->
    <ion-side-menu side="left">
@@ -24,8 +682,14 @@
             </ion-header-bar>
             <ion-content>
                 <ion-list ng-repeat="patient in patients">
-                    <ion-item nav-clear menu-close ng-click='fillUnhealthyForm(patient)' class='save-button'>
-                        {{patient.patientName}}
+                    <ion-item nav-clear menu-close ng-click='fillUnhealthyForm(patient)' class='patient-row-false'>
+                        <div>
+                          {{patient.name}}
+                        </div>
+                        <div style="font-size: 0.4em;color: #888888;">
+                         科室:{{patient.department.name}} 床号:{{patient.bedNum}}
+                        </div>
+                        
                     </ion-item>
                 </ion-list>
             </ion-content>

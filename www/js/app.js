@@ -58,14 +58,14 @@ define(['angular', 'starter.controllers', 'starter.services'], function(angular)
                 }
             })
 
-            .state('tab.patient-detail', {
-                url: '/chats/:chatId',
+            .state('tab.new-patient', {
+                url: '/new-patient',
                 views: {
-                    'tab-chats': {
-                        templateUrl: 'templates/patient-detail.html',
-                        controller: 'PatientDetailCtrl'
+                'new-patient': {
+                        templateUrl: 'templates/new-patient.html',
+                        controller: 'NewPatientController'
                     }
-                }
+                 }
             })
 
             .state('tab.account', {

@@ -112,3 +112,17 @@ margin-right: 0.6em;
 .ion-context-fix{
     margin-left:-3em;
 }
+.patient-row-true {
+
+}
+.patient-row-false {
+     background-color:  #F0F8FF   !important;
+}
+.unhealthy-detail-title{
+    text-align: center;
+    font-size: 2em;      
+}
+.submit-button-fix{
+    margin-left: 35%;
+    width: 30%;
+}

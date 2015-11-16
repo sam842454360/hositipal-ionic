@@ -10,8 +10,11 @@ define(function(require){
 
 
     return function ($scope, $http,PatientsService,$ionicListDelegate,$ionicPopup,$ionicLoading) {
-          var userID = '3';
+          var userID = '1';
           var getPatientsSuccess = function(patients){
+                                     /* patients[0].patientName = '谢霆锋';
+                                      patients[0].department ='内科'；
+                                      patients[0].patientBedNum = 1234;*/
                                        $scope.patients = patients;
                                       // $scope.isLoading = false;
                                        $ionicLoading.hide();

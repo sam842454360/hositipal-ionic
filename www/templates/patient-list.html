@@ -44,12 +44,17 @@
          <input class="patient-list-source col" type="tel" maxlength = "3" value = {{patient.angstTotal}}>
 
         <ion-option-button class="button-assertive save-button"  ng-click="save(patient)">
-          保存
+          &nbsp;&nbsp;&nbsp;保&nbsp;存&nbsp;&nbsp;&nbsp;
         </ion-option-button>
         <ion-option-button class="button-assertive delete-button"  ng-click="delete(patient)">
           删除
         </ion-option-button>
       </ion-item>
     </ion-list>
+     <div style ="margin-bottom: 1em;">&nbsp;</div>
+
+     <button class="button button-balanced submit-button-fix" ng-click="submitAllPatientRisk(patients)">
+              提  &nbsp; 交
+            </button>  
   </ion-content>
 </ion-view> 
