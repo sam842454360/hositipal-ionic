@@ -87,6 +87,12 @@ define(function(require){
         * Setup scope
         */
         $scope.currentDate = getDate();
+        $scope.submitAllPatientRisk = function(){
+           var alertPopup = $ionicPopup.alert({
+                                   title: '',
+                                   template: "<h4 style='text-align: center;'>提交成功</h4>"
+                                 });
+        };
   /*  $http({
         method:'GET',
         url:url,

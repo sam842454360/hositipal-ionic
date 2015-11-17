@@ -18,6 +18,6 @@ define([
     .controller('PatientDetailCtrl', ['$scope','$http','$stateParams', 'Chats', '$ionicPopup','$state',PatientDetailCtrl])
     .controller('AccountCtrl', ['$scope','$ionicSideMenuDelegate',AccountCtrl])
     .controller('PatientSubDetailCtrl',['$scope','$state', PatientSubDetailCtrl])
-    .controller('PatientUnHealthyListController',['$scope','PatientsService', PatientUnHealthyListCtrl])
-    .controller('NewPatientController',['$scope',NewPatientController])
+    .controller('PatientUnHealthyListController',['$scope','PatientsService', '$ionicPopup', PatientUnHealthyListCtrl])
+    .controller('NewPatientController',['$scope', '$ionicPopup',NewPatientController])
 });

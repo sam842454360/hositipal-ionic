@@ -1,5 +1,7 @@
 define(function(require){
-	return function($scope,PatientsService){
+	var loadingSuccessPopup = "<h4 style='text-align: center;'>提交成功</h4>"; 
+
+	return function($scope,PatientsService,$ionicPopup){
 		var userId = '1';
 		$scope.unHealthyForm = {
 			hasMorse:false,
@@ -41,8 +43,15 @@ define(function(require){
 			//if(i==28){
 			form.patientId = $scope.currentPatient.patientId;
 			console.log(form);
+			var alertPopup = $ionicPopup.alert({
+                                   title: '',
+                                   template: loadingSuccessPopup
+                                 }); 
 			PatientsService.submitUnhealthyForm(form,function(status){
 				console.log('save status:',status);
+				setTimeout(function(){
+					getAccidentList($scope.currentPatient.patientId);
+				},1);
 			});	
 		/*}else{
 			console.log('Not enough data');

@@ -21,9 +21,9 @@ define(function(require){
 			        },
 			getPatients :function(userID,successCallback,errorCallback){
 					successCallback([
-								     {"face":"../img/patient.jpg","angstTotal":1,"bradenTotal":2,"department":"内科","dvttotal":3,"goolmyTotal":4,"id":1,"morseTotal":5,"nrstotal":6,"patientBedNum":101,"patientId":1,"patientName":"黄晓明","reportTime":1446996344000},
-								     {"face":"../img/patient1.jpg","angstTotal":1,"bradenTotal":2,"department":"内科","dvttotal":3,"goolmyTotal":4,"id":2,"morseTotal":5,"nrstotal":6,"patientBedNum":102,"patientId":2,"patientName":"谢霆锋","reportTime":1446996364000},
-								     {"face":"../img/patient2.jpg","angstTotal":1,"bradenTotal":2,"department":"内科","dvttotal":3,"goolmyTotal":4,"id":3,"morseTotal":5,"nrstotal":6,"patientBedNum":103,"patientId":3,"patientName":"刘亦菲","reportTime":1446996375000}
+								     {"face":"../img/patient.jpg","angstTotal":51,"bradenTotal":32,"department":"内科","dvttotal":83,"goolmyTotal":44,"id":1,"morseTotal":54,"nrstotal":67,"patientBedNum":101,"patientId":1,"patientName":"黄晓明","reportTime":1446996344000},
+								     {"face":"../img/patient1.jpg","angstTotal":71,"bradenTotal":72,"department":"外科","dvttotal":39,"goolmyTotal":45,"id":2,"morseTotal":55,"nrstotal":86,"patientBedNum":102,"patientId":2,"patientName":"谢霆锋","reportTime":1446996364000},
+								     {"face":"../img/patient2.jpg","angstTotal":78,"bradenTotal":29,"department":"烧伤科","dvttotal":63,"goolmyTotal":46,"id":3,"morseTotal":56,"nrstotal":76,"patientBedNum":103,"patientId":3,"patientName":"刘亦菲","reportTime":1446996375000}
 								   ]);
 			/*	$http({
 			        method:'GET',
